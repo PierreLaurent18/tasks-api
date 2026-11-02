@@ -56,6 +56,7 @@ puis recommencez le `git push`.
 > 📸 **TP1-1 :** le run « Hello » réussi, avec l'étape qui affiche la branche et l'auteur **dépliée**.
 
 **Questions (à traiter dans le dossier) :** Combien de temps a duré le run ? Où voit-on les logs de chaque étape ?
+14 secondes. On voit les logs sur github dans actions.
 
 > Indice : la structure minimale est `name`, `on`, `jobs`, puis `runs-on` et `steps`.
 
