@@ -48,8 +48,6 @@ flake8 analyse le code et signale des problèmes sans rien modifier et black ré
 
 **Questions :** Pourquoi tester sur plusieurs versions de Python ? Que gagne-t-on avec le cache ? Un artefact, c'est quoi ?
 
-On test avec plusieurs versions pour s'assurer que ca fonctionne sur plusieurs versions et pour savoir sur quelle version ca ne fonctionne pas. github démarre une machine vierge et pip install retélécharge toutes les dépedances. Un artefact c’est un fichier produit par un job qu'on veut conserver après la fin de l’exécution.
-
 ---
 
 ## Partie 3 : Protéger la branche main (15 min)
