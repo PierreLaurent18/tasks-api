@@ -30,7 +30,7 @@ cache, protection de la branche `main`, travail à deux sur un même dépôt et 
 > 📸 **TP2-2 :** le job `lint` rouge, avec le message de flake8 lisible.
 
 **Questions :** Quelle différence entre un linter (flake8) et un formateur (black) ? Pourquoi séparer `lint` et `test` en deux jobs ?
-
+flake8 analyse le code et signale des problèmes sans rien modifier et black réécrit le code pour imposer un style uniforme
 ---
 
 ## Partie 2 : Matrix, cache et artefact (35 min)

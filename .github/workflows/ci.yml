@@ -3,14 +3,19 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
       - run: pip install -r requirements-dev.txt
       - run: pytest --cov=app --cov-fail-under=80
-      - run: pytest
+
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -21,5 +26,3 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: flake8 .
       - run: black --check .
-  
-
