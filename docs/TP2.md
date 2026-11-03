@@ -30,7 +30,7 @@ cache, protection de la branche `main`, travail à deux sur un même dépôt et 
 > 📸 **TP2-2 :** le job `lint` rouge, avec le message de flake8 lisible.
 
 **Questions :** Quelle différence entre un linter (flake8) et un formateur (black) ? Pourquoi séparer `lint` et `test` en deux jobs ?
-
+flake8 analyse le code et signale des problèmes sans rien modifier et black réécrit le code pour imposer un style uniforme
 ---
 
 ## Partie 2 : Matrix, cache et artefact (35 min)
@@ -47,6 +47,8 @@ cache, protection de la branche `main`, travail à deux sur un même dépôt et 
 > 📸 **TP2-4 :** l'étape setup-python du 2ᵉ run, avec la mention du cache restauré, et la section « Artifacts » de la page du run.
 
 **Questions :** Pourquoi tester sur plusieurs versions de Python ? Que gagne-t-on avec le cache ? Un artefact, c'est quoi ?
+
+On test avec plusieurs versions pour s'assurer que ca fonctionne sur plusieurs versions et pour savoir sur quelle version ca ne fonctionne pas. github démarre une machine vierge et pip install retélécharge toutes les dépedances. Un artefact c’est un fichier produit par un job qu'on veut conserver après la fin de l’exécution.
 
 ---
 
