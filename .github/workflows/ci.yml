@@ -9,6 +9,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt
+      - run: pytest --cov=app --cov-fail-under=80
       - run: pytest
   lint:
     runs-on: ubuntu-latest
