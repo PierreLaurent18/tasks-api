@@ -16,5 +16,3 @@ def is_valid_title(title: str) -> bool:
     cleaned = normalize_title(title)
     return 0 < len(cleaned) <= MAX_TITLE_LENGTH
 
-def test_echec_volontaire():
-    assert 1 == 2
