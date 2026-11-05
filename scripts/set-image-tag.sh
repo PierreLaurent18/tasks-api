@@ -2,6 +2,7 @@
 # Met à jour le tag de l'image (et APP_VERSION) dans un manifeste Kubernetes.
 # Usage : bash scripts/set-image-tag.sh k8s/deployment.yaml 0.2.0
 # Utilisé au jour 4 par le pipeline pour modifier le dépôt de configuration.
+sed -i.bak -E "s|(image: ghcr\.io/[^:]+:).*|\1${version}|" "$file"
 set -euo pipefail
 
 file="${1:?usage: set-image-tag.sh <fichier> <version>}"
