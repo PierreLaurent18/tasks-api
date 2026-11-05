@@ -15,7 +15,7 @@ if [ ! -f "$file" ]; then
   echo "Fichier introuvable : $file" >&2
   exit 1
 fi
-sed -i.bak -E "s|(image: ghcr\.io/[^:]+:).*|\1${version}|" "$file"
+
 sed -i.bak -E "s|(image: ghcr\.io/[^:]+/tasks-api:).*|\1${version}|" "$file"
 sed -i.bak -E "/name: APP_VERSION/{n;s|value: .*|value: \"${version}\"|;}" "$file"
 rm -f "$file.bak"
